@@ -1,7 +1,9 @@
 window.onload = function () {
   let form = document.querySelector("form");
   form.onsubmit = function (event) {
-    // in this section we get the value for each form input
+
+    event.preventDefault();
+
     const person1Input = document.getElementById("person1Input").value;
     const person2Input = document.getElementById("person2Input").value;
     const animalInput = document.getElementById("animalInput").value;
@@ -9,7 +11,7 @@ window.onload = function () {
     const verbInput = document.getElementById("verbInput").value;
     const nounInput = document.getElementById("nounInput").value;
 
-    // then we set the story variables to the values we got from the form
+
     document.querySelector("span#person1a").innerText = person1Input;
     document.querySelector("span#person1b").innerText = person1Input;
     document.querySelector("span#person1c").innerText = person1Input;
@@ -22,6 +24,5 @@ window.onload = function () {
 
     document.querySelector("div#story").removeAttribute("class");
 
-    event.preventDefault();
   };
 };
